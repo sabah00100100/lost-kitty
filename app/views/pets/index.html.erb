@@ -1,3 +1,14 @@
-<%  @pets.each do |pet| %>
-  <%= pet.name %>
-<% end %>
+
+<div class="container">
+  <div class="row mt-5">
+    <% @pets.each do |pet| %>
+      <div class="col-4">
+          <%= pet.name %>
+          <%= pet.found_on %>
+          <%= pet.city %>
+          <%= pet.species %>
+          <%= link_to "Found new home", pet_path(pet), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "card-remove-link" %>
+      </div>
+    <% end %>
+  </div>
+</div>
