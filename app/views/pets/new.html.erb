@@ -1,0 +1,41 @@
+<!-- <%#= form_with @pet do |f| %>
+  <div class="form-group">
+    <%#= f.label :name %>
+    <%#= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%#= f.label :address %>
+    <%#= f.text_field :address, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%#= f.label :species %>
+    <%#= f.select :species, collection: Pet::SPECIES, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%#= f.label :found_on %>
+    <%#= f.date_field :found_on, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%#= f.submit class: "btn btn-primary" %>
+  </div>
+<%# end %>
+
+<!--<h1>New pet</h1>
+  <%= simple_form_for @pet do |f| %>
+
+<div class ="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :species, collection: Pet::SPECIES %>
+    <%= f.input :found_on %>
+    <%= f.input :fluffy %>
+      <div class="form-actions">
+        <%= f.submit class: "btn btn-primary mt-4" %>
+      </div>
+    <%#= link_to "Delete", pet_path(Pet.last), data: { turbo_method: :delete, turbo_confirm: "Are your sure?" } %>
+    <%#= button_to "Delete", pet_path(Pet.last), method: :delete, form: { data: { turbo_confirm: "Are your sure?" } } %>
+</div>
+  <% end %>
