@@ -3,7 +3,7 @@
   <div class="row mt-5">
     <% @pets.each do |pet| %>
       <div class="col-4">
-          <%= pet.name %>
+          <%= pet.name, placeholder: "Garfield" %>
           <%= pet.found_on %>
           <%= pet.city %>
           <%= pet.species %>
